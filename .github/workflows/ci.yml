@@ -22,8 +22,6 @@ jobs:
 
       - name: Grant execute permission for gradlew
         run: chmod +x android-xr-starter-kit/gradlew
-        continue-on-error: true
 
       - name: Build with Gradle
         run: cd android-xr-starter-kit && ./gradlew assembleDebug
-        continue-on-error: true
