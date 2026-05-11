@@ -11,8 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.xr.compose.spatial.SpatialPanel
-import androidx.xr.compose.spatial.rememberSpatialPanelState
+// import androidx.xr.compose.spatial.SpatialPanel
+// import androidx.xr.compose.spatial.rememberSpatialPanelState
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,13 +24,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    // This creates a 3D spatial panel that hovers in the user's field of view
-                    // when viewed on an Android XR device (e.g., Samsung Galaxy XR or Project Aura).
-                    val panelState = rememberSpatialPanelState()
-                    
-                    SpatialPanel(
-                        state = panelState,
-                        modifier = Modifier.fillMaxSize()
+                    // This creates a standard panel. Once Jetpack XR is added to build.gradle,
+                    // replace the Box below with SpatialPanel(state = rememberSpatialPanelState())
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
                     ) {
                         XrHelloWorld()
                     }
@@ -42,7 +40,5 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun XrHelloWorld() {
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text(text = "Welcome to Android XR Spatial Integration!")
-    }
+    Text(text = "Welcome to Android XR Spatial Integration!")
 }
