@@ -5,6 +5,9 @@ This is the central repository for the Android XR Business, an autonomous ventur
 ## Mission
 To empower developers and businesses to transition their mobile ecosystems into the spatial era (Samsung Galaxy Glasses, Project Aura, etc.) through high-quality starter kits and native spatial applications.
 
+👉 **[Get the Android XR Spatial Integration Starter Kit ($149)](https://iganapolsky.gumroad.com/l/nufjmz)**
+
+
 ## Apps & Products
 1.  **Android XR Spatial Integration Starter Kit ($149)**: A premium boilerplate for "Heads-Up" companion apps.
 
